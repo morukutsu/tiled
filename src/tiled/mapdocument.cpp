@@ -44,6 +44,7 @@
 #include "resizemap.h"
 #include "rotatemapobject.h"
 #include "staggeredrenderer.h"
+#include "perspectiverenderer.h"
 #include "terrain.h"
 #include "terrainmodel.h"
 #include "tile.h"
@@ -74,6 +75,9 @@ MapDocument::MapDocument(Map *map, const QString &fileName):
         break;
     case Map::Staggered:
         mRenderer = new StaggeredRenderer(map);
+        break;
+    case Map::Perspective:
+        mRenderer = new PerspectiveRenderer(map);
         break;
     default:
         mRenderer = new OrthogonalRenderer(map);

@@ -219,19 +219,22 @@ Map *Map::clone() const
 QString Tiled::orientationToString(Map::Orientation orientation)
 {
     switch (orientation) {
-    default:
-    case Map::Unknown:
-        return QLatin1String("unknown");
-        break;
-    case Map::Orthogonal:
-        return QLatin1String("orthogonal");
-        break;
-    case Map::Isometric:
-        return QLatin1String("isometric");
-        break;
-    case Map::Staggered:
-        return QLatin1String("staggered");
-        break;
+        case Map::Orthogonal:
+            return QLatin1String("orthogonal");
+            break;
+        case Map::Isometric:
+            return QLatin1String("isometric");
+            break;
+        case Map::Staggered:
+            return QLatin1String("staggered");
+            break;
+        case Map::Perspective:
+            return QLatin1String("perspective");
+            break;
+        default:
+        case Map::Unknown:
+            return QLatin1String("unknown");
+            break;
     }
 }
 
@@ -244,6 +247,8 @@ Map::Orientation Tiled::orientationFromString(const QString &string)
         orientation = Map::Isometric;
     } else if (string == QLatin1String("staggered")) {
         orientation = Map::Staggered;
+    } else if (string == QLatin1String("perspective")) {
+        orientation = Map::Perspective;
     }
     return orientation;
 }

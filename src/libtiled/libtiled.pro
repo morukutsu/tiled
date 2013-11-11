@@ -67,7 +67,8 @@ SOURCES += compression.cpp \
     staggeredrenderer.cpp \
     tile.cpp \
     tilelayer.cpp \
-    tileset.cpp
+    tileset.cpp \
+    perspectiverenderer.cpp
 HEADERS += compression.h \
     gidmapper.h \
     imagelayer.h \
@@ -91,7 +92,8 @@ HEADERS += compression.h \
     tiled_global.h \
     tilelayer.h \
     tileset.h \
-    logginginterface.h
+    logginginterface.h \
+    perspectiverenderer.h
 
 contains(INSTALL_HEADERS, yes) {
     headers.files = $${HEADERS}

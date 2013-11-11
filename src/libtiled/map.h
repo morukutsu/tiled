@@ -68,7 +68,8 @@ public:
         Unknown,
         Orthogonal,
         Isometric,
-        Staggered
+        Staggered,
+        Perspective
     };
 
     /**

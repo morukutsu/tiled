@@ -67,6 +67,7 @@ NewMapDialog::NewMapDialog(QWidget *parent) :
     mUi->orientation->addItem(tr("Orthogonal"), Map::Orthogonal);
     mUi->orientation->addItem(tr("Isometric"), Map::Isometric);
     mUi->orientation->addItem(tr("Isometric (Staggered)"), Map::Staggered);
+    mUi->orientation->addItem(tr("Orthogonal (Perspective)"), Map::Perspective);
 
     mUi->orientation->setCurrentIndex(orientation);
     mUi->layerFormat->setCurrentIndex(prefs->layerDataFormat());
